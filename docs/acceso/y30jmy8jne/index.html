@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jūsų priėjimas · Dailės Terapijos Vadovas</title>
+<style>
+:root {
+  --bg: #FFF8F4; --bg2: #F6ECFF; --a1: #D9C9F7; --a1d: #B89FE0;
+  --a2: #F3B8D2; --a2d: #E98B7A; --title: #4E4036; --body: #6F6258;
+  --body2: #8A7A70; --card: #FFFFFF; --green: #5BAA7A;
+  --grad: linear-gradient(135deg, #D9C9F7, #F3B8D2);
+  --warn: #B36200;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--body); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 48px 20px 80px; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 40px; }
+.badge-top { display: inline-block; background: var(--grad); color: var(--title); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 16px; border-radius: 99px; margin-bottom: 20px; }
+.hero h1 { font-size: 26px; line-height: 1.25; color: var(--title); margin-bottom: 10px; font-weight: 700; }
+.hero p { font-size: 16px; color: var(--body2); line-height: 1.55; }
+
+/* Preparing notice */
+.notice {
+  background: #FFF8E7; border: 1.5px solid #E8C06A; border-radius: 14px;
+  padding: 20px 24px; margin-bottom: 32px; text-align: center;
+}
+.notice .icon { font-size: 32px; margin-bottom: 10px; }
+.notice h2 { font-size: 17px; color: #7A5500; font-weight: 700; margin-bottom: 8px; }
+.notice p { font-size: 14px; color: #7A5500; line-height: 1.6; }
+.notice .eta { display: inline-block; margin-top: 10px; background: #E8C06A; color: #5A3800; border-radius: 99px; padding: 4px 14px; font-size: 12px; font-weight: 700; }
+
+/* Stats */
+.stats { display: flex; gap: 12px; justify-content: center; margin: 24px 0 32px; flex-wrap: wrap; }
+.stat { background: var(--card); border: 1.5px solid var(--a1); border-radius: 12px; padding: 14px 20px; text-align: center; min-width: 120px; }
+.stat .num { font-size: 24px; font-weight: 700; color: var(--title); }
+.stat .lbl { font-size: 11px; color: var(--body2); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+
+/* Section header */
+.sec-header { display: flex; align-items: center; gap: 8px; margin: 32px 0 16px; }
+.sec-header h2 { font-size: 17px; color: var(--title); font-weight: 700; }
+.sec-line { flex: 1; height: 1.5px; background: var(--a1); }
+
+/* Core card */
+.core-card {
+  background: var(--card); border: 2px solid var(--a1d); border-radius: 16px;
+  padding: 24px 20px; margin-bottom: 24px; position: relative; overflow: hidden;
+}
+.core-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--grad); }
+.core-card .label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--a1d); margin-bottom: 8px; }
+.core-card h3 { font-size: 19px; color: var(--title); font-weight: 700; margin-bottom: 6px; }
+.core-card .desc { font-size: 14px; color: var(--body2); line-height: 1.55; margin-bottom: 16px; }
+.core-card .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.core-card .pill { font-size: 11px; background: var(--bg2); border: 1px solid var(--a1); border-radius: 99px; padding: 4px 12px; color: var(--body); }
+
+/* Bonus list */
+.bonus-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.bonus-card {
+  background: var(--card); border: 1.5px solid var(--a1); border-radius: 12px;
+  padding: 16px 18px; display: flex; align-items: center; gap: 14px;
+}
+.bonus-card .icon { font-size: 24px; flex-shrink: 0; }
+.bonus-card .info { flex: 1; }
+.bonus-card .info .label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--a1d); margin-bottom: 2px; }
+.bonus-card .info h4 { font-size: 14px; color: var(--title); font-weight: 600; margin-bottom: 2px; }
+.bonus-card .info p { font-size: 12px; color: var(--body2); }
+
+/* Soon badge */
+.badge-soon {
+  flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px;
+  background: var(--bg2); border: 1px solid var(--a1); border-radius: 8px;
+  padding: 8px 12px; font-size: 12px; font-weight: 700; color: var(--a1d);
+  white-space: nowrap;
+}
+
+/* Steps */
+.steps { background: var(--bg2); border-radius: 12px; padding: 20px; margin-bottom: 32px; }
+.steps h3 { font-size: 15px; color: var(--title); margin-bottom: 14px; font-weight: 700; }
+.step-row { display: flex; gap: 12px; margin-bottom: 10px; align-items: flex-start; }
+.step-row:last-child { margin-bottom: 0; }
+.step-num { flex-shrink: 0; width: 26px; height: 26px; background: var(--a1d); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; margin-top: 2px; }
+.step-row p { font-size: 13px; color: var(--body); line-height: 1.55; }
+
+/* Footer */
+.footer-note { text-align: center; font-size: 13px; color: var(--body2); line-height: 1.6; padding: 20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge-top">✅ Pirkimas patvirtintas</div>
+    <h1>Dailės Terapijos Vadovas<br>100+ Pratybų + 6 Priedai Įtraukti</h1>
+    <p>Ačiū už pirkimą! Jūsų medžiaga šiuo metu ruošiama.</p>
+  </div>
+
+  <!-- Preparing notice -->
+  <div class="notice">
+    <div class="icon">⏳</div>
+    <h2>Jūsų medžiaga ruošiama</h2>
+    <p>Visi failai šiuo metu yra rengiami ir tikrinami kokybės atžvilgiu.<br>Grįžkite per kelias valandas — viskas bus paruošta šiam adresui.</p>
+    <span class="eta">🔁 Atnaujinkite šį puslapį po kelių valandų</span>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat"><div class="num">100+</div><div class="lbl">Pratybų</div></div>
+    <div class="stat"><div class="num">6</div><div class="lbl">Priedai</div></div>
+    <div class="stat"><div class="num">∞</div><div class="lbl">Neribotas priėjimas</div></div>
+  </div>
+
+  <!-- Core product -->
+  <div class="sec-header"><div class="sec-line"></div><h2>🎨 Pagrindinis produktas</h2><div class="sec-line"></div></div>
+
+  <div class="core-card">
+    <div class="label">Pagrindinis vadovas</div>
+    <h3>Dailės Terapijos Vadovas</h3>
+    <p class="desc">100 vadovaujamų pratybų savipažinai, gydymui ir vidiniam augimui, suskirstytų į 10 temų. PDF — atsispausdink ir naudok kiek nori.</p>
+    <div class="meta">
+      <span class="pill">📖 100 pratybų</span>
+      <span class="pill">🎨 10 temų</span>
+      <span class="pill">🖨️ PDF · Spausdinama</span>
+      <span class="pill">📐 A4 formatas</span>
+    </div>
+    <div class="badge-soon">🕐 Ruošiama...</div>
+  </div>
+
+  <!-- Bonuses -->
+  <div class="sec-header"><div class="sec-line"></div><h2>🎁 Jūsų nemokami priedai</h2><div class="sec-line"></div></div>
+
+  <div class="bonus-list">
+    <div class="bonus-card">
+      <div class="icon">🖌️</div>
+      <div class="info">
+        <div class="label">Priedas 1</div>
+        <h4>17 Papildomų Dailės Terapijos Pratybų</h4>
+        <p>Naujos technikos: antspaudas, monotipija, piešimas kvėpavimu ir daugiau</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+
+    <div class="bonus-card">
+      <div class="icon">⭐</div>
+      <div class="info">
+        <div class="label">Priedas 2</div>
+        <h4>20 Pratybų Savivertei Ugdyti</h4>
+        <p>Menas savimeilės ir pasitikėjimo savimi tarnyboje</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+
+    <div class="bonus-card">
+      <div class="icon">💭</div>
+      <div class="info">
+        <div class="label">Priedas 3</div>
+        <h4>Impulsų Kortelės Darbui su Baime — 50 Klausimų</h4>
+        <p>Impulsų kortelės sąmoningesniam nerimo įveikimui</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+
+    <div class="bonus-card">
+      <div class="icon">🧘</div>
+      <div class="info">
+        <div class="label">Priedas 4</div>
+        <h4>Impulsai Emociniams Blokams Atpalaiduoti</h4>
+        <p>5 technikos sustingusiai energijai išlaisvinti</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+
+    <div class="bonus-card">
+      <div class="icon">📚</div>
+      <div class="info">
+        <div class="label">Priedas 5</div>
+        <h4>Taikymo ir Lydinčioji Vadovas</h4>
+        <p>Specialistams, taikiantiems dailės terapiją praktikoje</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+
+    <div class="bonus-card">
+      <div class="icon">💪</div>
+      <div class="info">
+        <div class="label">Priedas 6</div>
+        <h4>Stiprink Savo Pasitikėjimą Savimi</h4>
+        <p>40 stiprinančių žinučių daugiau pasitikėjimo savimi</p>
+      </div>
+      <span class="badge-soon">🕐 Ruošiama</span>
+    </div>
+  </div>
+
+  <!-- Extra gift -->
+  <div class="sec-header"><div class="sec-line"></div><h2>✨ Ypatinga dovana</h2><div class="sec-line"></div></div>
+
+  <div class="core-card" style="border-color: var(--a2);">
+    <div class="label" style="color: var(--a2d);">2-asis leidimas — visiškai naujas</div>
+    <h3>100 Naujų Dailės Terapijos Veiklų</h3>
+    <p class="desc">Visiškai naujas papildymas prie Vadovo su 100 papildomų veiklų 10 naujų temų: gamtos elementai, miesto peizažai, gyvūnų galia, naktiniai sapnai ir daugiau.</p>
+    <div class="meta">
+      <span class="pill">🆕 100 naujų veiklų</span>
+      <span class="pill">🎁 NEMOKAMAI</span>
+    </div>
+    <div class="badge-soon">🕐 Ruošiama...</div>
+  </div>
+
+  <!-- Next step -->
+  <div class="steps">
+    <h3>📌 Kitas žingsnis</h3>
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <p>Atnaujinkite šį puslapį po kelių valandų — visi failai bus paruošti šiame adrese.</p>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <p>Išsaugokite šio puslapio nuorodą arba pasižymėkite ją — tai jūsų nuolatinis priėjimo puslapis.</p>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <p>Atsisiųskite kiekvieną failą ir išsaugokite saugioje vietoje.</p>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <strong>Dailės Terapijos Vadovas</strong> · © 2026
+  </div>
+
+</div>
+</body>
+</html>
