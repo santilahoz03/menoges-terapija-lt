@@ -76,6 +76,16 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
   white-space: nowrap;
 }
 
+/* Download button */
+.btn-dl {
+  flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px;
+  background: var(--a1d); color: #fff; border-radius: 10px;
+  padding: 10px 16px; font-size: 13px; font-weight: 700;
+  text-decoration: none; white-space: nowrap;
+  transition: opacity .15s;
+}
+.btn-dl:hover { opacity: .85; }
+
 /* Steps */
 .steps { background: var(--bg2); border-radius: 12px; padding: 20px; margin-bottom: 32px; }
 .steps h3 { font-size: 15px; color: var(--title); margin-bottom: 14px; font-weight: 700; }
@@ -95,21 +105,13 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
   <div class="hero">
     <div class="badge-top">✅ Pirkimas patvirtintas</div>
     <h1>Dailės Terapijos Vadovas<br>100+ Pratybų + 6 Priedai Įtraukti</h1>
-    <p>Ačiū už pirkimą! Jūsų medžiaga šiuo metu ruošiama.</p>
-  </div>
-
-  <!-- Preparing notice -->
-  <div class="notice">
-    <div class="icon">⏳</div>
-    <h2>Jūsų medžiaga ruošiama</h2>
-    <p>Visi failai šiuo metu yra rengiami ir tikrinami kokybės atžvilgiu.<br>Grįžkite per kelias valandas — viskas bus paruošta šiam adresui.</p>
-    <span class="eta">🔁 Atnaujinkite šį puslapį po kelių valandų</span>
+    <p>Ačiū už pirkimą! Visi jūsų failai yra paruošti toliau.</p>
   </div>
 
   <!-- Stats -->
   <div class="stats">
     <div class="stat"><div class="num">100+</div><div class="lbl">Pratybų</div></div>
-    <div class="stat"><div class="num">6</div><div class="lbl">Priedai</div></div>
+    <div class="stat"><div class="num">7</div><div class="lbl">PDF failų</div></div>
     <div class="stat"><div class="num">∞</div><div class="lbl">Neribotas priėjimas</div></div>
   </div>
 
@@ -126,7 +128,7 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
       <span class="pill">🖨️ PDF · Spausdinama</span>
       <span class="pill">📐 A4 formatas</span>
     </div>
-    <div class="badge-soon">🕐 Ruošiama...</div>
+    <a class="btn-dl" href="../../archivos/core-vadovas-100.pdf" download>⬇ Atsisiųsti vadovą</a>
   </div>
 
   <!-- Bonuses -->
@@ -140,7 +142,7 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
         <h4>17 Papildomų Dailės Terapijos Pratybų</h4>
         <p>Naujos technikos: antspaudas, monotipija, piešimas kvėpavimu ir daugiau</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-1-17-pratybiu.pdf" download>⬇ PDF</a>
     </div>
 
     <div class="bonus-card">
@@ -150,7 +152,7 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
         <h4>20 Pratybų Savivertei Ugdyti</h4>
         <p>Menas savimeilės ir pasitikėjimo savimi tarnyboje</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-2-20-savivertei.pdf" download>⬇ PDF</a>
     </div>
 
     <div class="bonus-card">
@@ -160,7 +162,7 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
         <h4>Impulsų Kortelės Darbui su Baime — 50 Klausimų</h4>
         <p>Impulsų kortelės sąmoningesniam nerimo įveikimui</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-3-korteles-baime.pdf" download>⬇ PDF</a>
     </div>
 
     <div class="bonus-card">
@@ -168,19 +170,19 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
       <div class="info">
         <div class="label">Priedas 4</div>
         <h4>Impulsai Emociniams Blokams Atpalaiduoti</h4>
-        <p>5 technikos sustingusiai energijai išlaisvinti</p>
+        <p>8 technikos sustingusiai energijai išlaisvinti</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-4-emocinis-blokas.pdf" download>⬇ PDF</a>
     </div>
 
     <div class="bonus-card">
       <div class="icon">📚</div>
       <div class="info">
         <div class="label">Priedas 5</div>
-        <h4>Taikymo ir Lydinčioji Vadovas</h4>
-        <p>Specialistams, taikiantiems dailės terapiją praktikoje</p>
+        <h4>Taikymo ir Lydėjimo Vadovas</h4>
+        <p>Kaip naudoti vadovą – savaitinis planas, 10 temų, refleksija</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-5-taikymo-vadovas.pdf" download>⬇ PDF</a>
     </div>
 
     <div class="bonus-card">
@@ -188,9 +190,9 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
       <div class="info">
         <div class="label">Priedas 6</div>
         <h4>Stiprink Savo Pasitikėjimą Savimi</h4>
-        <p>40 stiprinančių žinučių daugiau pasitikėjimo savimi</p>
+        <p>30 impulsų kortelių drąsos ir pasitikėjimo ugdymui</p>
       </div>
-      <span class="badge-soon">🕐 Ruošiama</span>
+      <a class="btn-dl" href="../../archivos/priedas-6-pasitikejimas.pdf" download>⬇ PDF</a>
     </div>
   </div>
 
@@ -200,12 +202,12 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
   <div class="core-card" style="border-color: var(--a2);">
     <div class="label" style="color: var(--a2d);">2-asis leidimas — visiškai naujas</div>
     <h3>100 Naujų Dailės Terapijos Veiklų</h3>
-    <p class="desc">Visiškai naujas papildymas prie Vadovo su 100 papildomų veiklų 10 naujų temų: gamtos elementai, miesto peizažai, gyvūnų galia, naktiniai sapnai ir daugiau.</p>
+    <p class="desc">Visiškai naujas papildymas prie Vadovo su 100 papildomų veiklų: gamtos ritmas, sapnų žemėlapiai, santykių piešimas, gamtos terapija ir dvasingumas.</p>
     <div class="meta">
       <span class="pill">🆕 100 naujų veiklų</span>
       <span class="pill">🎁 NEMOKAMAI</span>
     </div>
-    <div class="badge-soon">🕐 Ruošiama...</div>
+    <a class="btn-dl" href="../../archivos/papildoma-dovana-2-leidimas.pdf" download>⬇ Atsisiųsti dovaną</a>
   </div>
 
   <!-- Next step -->
@@ -213,15 +215,15 @@ html, body { background: var(--bg); color: var(--body); font-family: system-ui, 
     <h3>📌 Kitas žingsnis</h3>
     <div class="step-row">
       <div class="step-num">1</div>
-      <p>Atnaujinkite šį puslapį po kelių valandų — visi failai bus paruošti šiame adrese.</p>
+      <p>Atsisiųskite kiekvieną failą spustelėdami mygtuką — failai išsaugomi jūsų įrenginyje.</p>
     </div>
     <div class="step-row">
       <div class="step-num">2</div>
-      <p>Išsaugokite šio puslapio nuorodą arba pasižymėkite ją — tai jūsų nuolatinis priėjimo puslapis.</p>
+      <p>Išsaugokite šio puslapio nuorodą — tai jūsų nuolatinis priėjimo puslapis.</p>
     </div>
     <div class="step-row">
       <div class="step-num">3</div>
-      <p>Atsisiųskite kiekvieną failą ir išsaugokite saugioje vietoje.</p>
+      <p>Atsispausdinkite pratybas ir pradėkite nuo 10 minučių kasdien.</p>
     </div>
   </div>
 
